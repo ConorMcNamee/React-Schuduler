@@ -1,8 +1,32 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
 import "./Calendar.css";
 
+/*
+    The goal of this Application is to create a Calendar style app
+    with many different views that allows you to schedule events.
+    The Application should also be fully customizable
+    
+*/
+
+
+const FormatDate = () => {
+    // Get the Current Date
+    let date = new Date();
+
+    // Display a tile for each day in the month
+}
+
+
+
+
+// Display Calendar Comp
 const Calendar = () => {
+
+    useEffect(() => {
+        console.log("Hello World")
+    }, []);
 
     return (
         <div className="schedulerAppContainer">
