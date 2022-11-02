@@ -1,7 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import "./Calendar.css";
 
 import "./Calendar.css";
+
+// Component Imports
+import Day from "./Day";
 
 /*
     The goal of this Application is to create a Calendar style app
@@ -10,55 +14,23 @@ import "./Calendar.css";
     
 */
 
-
-const FormatDate = () => {
-    // Get the Current Date
-    let date = new Date();
-
-    // Display a tile for each day in the month
-}
-
-
-
-
-// Display Calendar Comp
 const Calendar = () => {
 
-    useEffect(() => {
-        console.log("Hello World")
-    }, []);
+    const [date, setDate] = useState(new Date());
+    const [day, setDay] = useState(date.getDay());
+    const [month, setMonth] = useState(date.getMonth());
+    const [year, setYear] = useState(date.getFullYear());
+
+    const daysInMonth = (month:number) => {
+        return new Date(year, month, 0).getDate();
+    }
+
+    console.log(Day(date));
 
     return (
-        <div className="schedulerAppContainer">
-            <table className="schedulerApp">
-                <tr className="schedulerAppRow">
-                    <td className="schedulerAppCol">
-                    Monday
-                    </td>
-
-                    <td className="schedulerAppCol">
-                        Tuesday
-                    </td>
-
-                    <td className="schedulerAppCol">
-                        Wednesday
-                    </td>
-
-                    <td className="schedulerAppCol">
-                        Thursday
-                    </td>
-
-                    <td className="schedulerAppCol">
-                        Friday
-                    </td>
-
-                    <td className="schedulerAppCol">
-                        Saturday
-                    </td>
-
-                    <td className="schedulerAppCol">
-                        Sunday
-                    </td>
+        <div className="schedulerApp">
+            <table className="">
+                <tr className="weekdays">
                 </tr>
             </table>
         </div>

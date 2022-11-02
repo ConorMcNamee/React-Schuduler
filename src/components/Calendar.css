@@ -1,24 +1,4 @@
-.schedulerAppContainer{
+.schedulerApp {
     display: flex;
-    margin: 1em;
-}
-
-.schedulerApp{
-    display: flex;
-    width: 100%;
-}
-
-.schedulerAppRow{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-
-.schedulerAppCol{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid black;
+    padding: 1.5em;
 }
